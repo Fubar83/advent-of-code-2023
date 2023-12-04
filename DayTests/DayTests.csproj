@@ -29,10 +29,14 @@
         <EmbeddedResource Include="Day2\example.txt"/>
         <EmbeddedResource Include="Day3\data.txt"/>
         <EmbeddedResource Include="Day3\example.txt"/>
+        <EmbeddedResource Include="Day4\data.txt"/>
+        <EmbeddedResource Include="Day4\example.txt"/>
         <None Remove="Day1\example.txt"/>
         <EmbeddedResource Include="Day1\example.txt"/>
         <None Remove="Day1\example2.txt"/>
         <EmbeddedResource Include="Day1\example2.txt"/>
+        <None Remove="Day4\example2.txt"/>
+        <EmbeddedResource Include="Day4\example2.txt"/>
     </ItemGroup>
 
 </Project>
