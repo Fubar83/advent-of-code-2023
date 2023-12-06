@@ -21,7 +21,6 @@ public class Day2Tests
         sum.ShouldBe(expectedResult);
     }
 
-
     [Theory]
     [InlineData("data.txt", 78375)]
     [InlineData("example.txt", 2286)]
@@ -37,7 +36,6 @@ public class Day2Tests
 
         sum.ShouldBe(expectedResult);
     }
-
 
     private static class Implementations
     {
@@ -127,7 +125,7 @@ public class Day2Tests
             var power = 1;
             foreach (var v in result.Select(x => x.Value))
             {
-                power = power * v;
+                power *= v;
             }
 
             return power;

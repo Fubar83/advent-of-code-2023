@@ -22,7 +22,6 @@ public class Day4Tests
         sum.ShouldBe(expectedResult);
     }
 
-
     [Theory]
     [InlineData("data.txt", 9721255)]
     [InlineData("example2.txt", 30)]
@@ -83,13 +82,6 @@ public class Day4Tests
             }
 
             return instances.Sum(x => x.Value);
-        }
-
-        private class Card
-        {
-            public int Index { get; set; }
-            public int Value { get; set; }
-            public int Type { get; set; }
         }
     }
 }

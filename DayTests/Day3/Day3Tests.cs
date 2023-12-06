@@ -92,7 +92,6 @@ public static class Implementations
             }
         }
 
-
         var result = 0;
         for (var lineIndex = 0; lineIndex < lines.Length; lineIndex++)
         {
@@ -109,7 +108,6 @@ public static class Implementations
                 }
             }
         }
-
 
         return result;
     }

@@ -21,7 +21,6 @@ public class Day1Tests
         sum.ShouldBe(expectedResult);
     }
 
-
     [Theory]
     [InlineData("data.txt", 54431)]
     [InlineData("example2.txt", 281)]
@@ -38,12 +37,11 @@ public class Day1Tests
         sum.ShouldBe(expectedResult);
     }
 
-
     private static class Implementations
     {
         public static int Part1(string input)
         {
-            var numbers = input.Where(x => char.IsDigit(x)).ToArray();
+            var numbers = input.Where(char.IsDigit).ToArray();
             var result = int.Parse(numbers.First() + "" + numbers.Last());
             return result;
         }
