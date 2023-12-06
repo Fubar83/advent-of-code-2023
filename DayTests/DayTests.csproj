@@ -31,6 +31,10 @@
         <EmbeddedResource Include="Day3\example.txt"/>
         <EmbeddedResource Include="Day4\data.txt"/>
         <EmbeddedResource Include="Day4\example.txt"/>
+        <EmbeddedResource Include="Day6\data.txt"/>
+        <EmbeddedResource Include="Day6\data2.txt"/>
+        <EmbeddedResource Include="Day6\example.txt"/>
+        <EmbeddedResource Include="Day6\example2.txt"/>
         <None Remove="Day1\example.txt"/>
         <EmbeddedResource Include="Day1\example.txt"/>
         <None Remove="Day1\example2.txt"/>
