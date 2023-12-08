@@ -42,7 +42,6 @@ public class Day4Tests
             var winning = split[1].Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
             var hand = split[2].Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
-
             var count = hand.Count(x => winning.Contains(x));
             var score = (int)Math.Pow(2, count - 1);
 

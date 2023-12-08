@@ -1,5 +1,4 @@
-﻿using System.Text;
-using DayTests.Shared;
+﻿using DayTests.Shared;
 using Shouldly;
 
 namespace DayTests.Day8;
@@ -27,7 +26,7 @@ public class Day8Tests
         var lines = ResourceHelper
             .ForAssembly<Day8Tests>()
             .ReadLines(testFile).ToArray();
-    
+
         var score = Implementations.Part2(lines);
         score.ShouldBe(expectedResult);
     }
@@ -45,7 +44,7 @@ public class Day8Tests
                 var id = line.Substring(0, 3);
                 var moveLeft = line.Substring(7, 3);
                 var moveRight = line.Substring(12, 3);
-                lookup.Add(id, new []{moveLeft, moveRight});
+                lookup.Add(id, new[] { moveLeft, moveRight });
             }
 
             var steps = 0;
@@ -53,22 +52,22 @@ public class Day8Tests
             foreach (var next in sequence)
             {
                 var nextId = lookup[current][next];
-                
+
 
                 if (current == "ZZZ")
                 {
                     break;
                 }
+
                 steps++;
                 current = nextId;
             }
-            
-            
-            return steps;
 
+
+            return steps;
         }
 
-       
+
         //Part 2
         public static long Part2(string[] input)
         {
@@ -81,7 +80,7 @@ public class Day8Tests
                 var id = line.Substring(0, 3);
                 var moveLeft = line.Substring(7, 3);
                 var moveRight = line.Substring(12, 3);
-                lookup.Add(id, new []{moveLeft, moveRight});
+                lookup.Add(id, new[] { moveLeft, moveRight });
             }
 
             var steps = 0;
@@ -106,7 +105,9 @@ public class Day8Tests
                 }
 
                 if (reachEndIn.Count == current.Count)
+                {
                     break;
+                }
             }
 
             var result = new Dictionary<long, long>();
@@ -115,10 +116,10 @@ public class Day8Tests
                 result.Add(r.Key, r.Value);
             }
 
-            return LeastCommonMultiple.CalculateLCM(result.Values.ToArray());
+            return LCM.Calculate(result.Values.ToArray());
         }
 
-        static IEnumerable<long> GetSequence(string sequence)
+        private static IEnumerable<long> GetSequence(string sequence)
         {
             do
             {

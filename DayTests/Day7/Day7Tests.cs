@@ -148,7 +148,8 @@ public class Day7Tests
             return result;
         }
 
-        private static void GenerateCombinationsHelper(int[] array, int index, int minValue, int maxValue, List<int[]> result)
+        private static void GenerateCombinationsHelper(int[] array, int index, int minValue, int maxValue,
+            List<int[]> result)
         {
             while (true)
             {
