@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTests", "DayTests\DayTests.csproj", "{107B3299-6354-4246-901B-FD93AECA6FBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Math", "Shared.Math\Shared.Math.csproj", "{E2A0D3EE-46C9-47F8-9ECA-7F6440E47626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Math.Tests", "Shared.Math.Tests\Shared.Math.Tests.csproj", "{4757EC6B-EFEE-460F-8C94-C4A49D481A13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{107B3299-6354-4246-901B-FD93AECA6FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{107B3299-6354-4246-901B-FD93AECA6FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{107B3299-6354-4246-901B-FD93AECA6FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A0D3EE-46C9-47F8-9ECA-7F6440E47626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A0D3EE-46C9-47F8-9ECA-7F6440E47626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A0D3EE-46C9-47F8-9ECA-7F6440E47626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A0D3EE-46C9-47F8-9ECA-7F6440E47626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4757EC6B-EFEE-460F-8C94-C4A49D481A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4757EC6B-EFEE-460F-8C94-C4A49D481A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4757EC6B-EFEE-460F-8C94-C4A49D481A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4757EC6B-EFEE-460F-8C94-C4A49D481A13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

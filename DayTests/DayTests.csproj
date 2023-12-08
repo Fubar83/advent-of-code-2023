@@ -39,12 +39,20 @@
         <EmbeddedResource Include="Day6\example2.txt"/>
         <EmbeddedResource Include="Day7\data.txt"/>
         <EmbeddedResource Include="Day7\example.txt"/>
+        <EmbeddedResource Include="Day8\data.txt"/>
+        <EmbeddedResource Include="Day8\example.txt"/>
         <None Remove="Day1\example.txt"/>
         <EmbeddedResource Include="Day1\example.txt"/>
         <None Remove="Day1\example2.txt"/>
         <EmbeddedResource Include="Day1\example2.txt"/>
         <None Remove="Day4\example2.txt"/>
         <EmbeddedResource Include="Day4\example2.txt"/>
+        <None Remove="Day8\example2.txt"/>
+        <EmbeddedResource Include="Day8\example2.txt"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Shared.Math\Shared.Math.csproj"/>
     </ItemGroup>
 
 </Project>
