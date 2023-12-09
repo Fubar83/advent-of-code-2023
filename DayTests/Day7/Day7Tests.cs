@@ -113,8 +113,6 @@ public class Day7Tests
             return 1;
         }
 
-        //Part 2
-
         private static int[] SplitCards2(string cards)
         {
             const string values = "J 23456789TQKA";

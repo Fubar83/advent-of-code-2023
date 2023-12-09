@@ -67,8 +67,6 @@ public class Day8Tests
             return steps;
         }
 
-
-        //Part 2
         public static long Part2(string[] input)
         {
             var sequence = GetSequence(input[0]);
