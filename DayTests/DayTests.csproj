@@ -10,9 +10,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
-        <PackageReference Include="Shouldly" Version="4.2.1" />
-        <PackageReference Include="xunit" Version="2.4.2" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0"/>
+        <PackageReference Include="Shouldly" Version="4.2.1"/>
+        <PackageReference Include="xunit" Version="2.4.2"/>
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
@@ -24,37 +24,45 @@
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Include="Day1\data.txt" />
-        <EmbeddedResource Include="Day2\data.txt" />
-        <EmbeddedResource Include="Day2\example.txt" />
-        <EmbeddedResource Include="Day3\data.txt" />
-        <EmbeddedResource Include="Day3\example.txt" />
-        <EmbeddedResource Include="Day4\data.txt" />
-        <EmbeddedResource Include="Day4\example.txt" />
-        <EmbeddedResource Include="Day5\data.txt" />
-        <EmbeddedResource Include="Day5\example.txt" />
-        <EmbeddedResource Include="Day6\data.txt" />
-        <EmbeddedResource Include="Day6\data2.txt" />
-        <EmbeddedResource Include="Day6\example.txt" />
-        <EmbeddedResource Include="Day6\example2.txt" />
-        <EmbeddedResource Include="Day7\data.txt" />
-        <EmbeddedResource Include="Day7\example.txt" />
-        <EmbeddedResource Include="Day8\data.txt" />
-        <EmbeddedResource Include="Day8\example.txt" />
-        <EmbeddedResource Include="Day9\data.txt" />
-        <EmbeddedResource Include="Day9\example.txt" />
-        <None Remove="Day1\example.txt" />
-        <EmbeddedResource Include="Day1\example.txt" />
-        <None Remove="Day1\example2.txt" />
-        <EmbeddedResource Include="Day1\example2.txt" />
-        <None Remove="Day4\example2.txt" />
-        <EmbeddedResource Include="Day4\example2.txt" />
-        <None Remove="Day8\example2.txt" />
-        <EmbeddedResource Include="Day8\example2.txt" />
+        <EmbeddedResource Include="Day10\data.txt"/>
+        <EmbeddedResource Include="Day10\example.txt"/>
+        <EmbeddedResource Include="Day10\example3.txt"/>
+        <EmbeddedResource Include="Day10\example4.txt"/>
+        <EmbeddedResource Include="Day11\data.txt"/>
+        <EmbeddedResource Include="Day11\example.txt"/>
+        <EmbeddedResource Include="Day1\data.txt"/>
+        <EmbeddedResource Include="Day2\data.txt"/>
+        <EmbeddedResource Include="Day2\example.txt"/>
+        <EmbeddedResource Include="Day3\data.txt"/>
+        <EmbeddedResource Include="Day3\example.txt"/>
+        <EmbeddedResource Include="Day4\data.txt"/>
+        <EmbeddedResource Include="Day4\example.txt"/>
+        <EmbeddedResource Include="Day5\data.txt"/>
+        <EmbeddedResource Include="Day5\example.txt"/>
+        <EmbeddedResource Include="Day6\data.txt"/>
+        <EmbeddedResource Include="Day6\data2.txt"/>
+        <EmbeddedResource Include="Day6\example.txt"/>
+        <EmbeddedResource Include="Day6\example2.txt"/>
+        <EmbeddedResource Include="Day7\data.txt"/>
+        <EmbeddedResource Include="Day7\example.txt"/>
+        <EmbeddedResource Include="Day8\data.txt"/>
+        <EmbeddedResource Include="Day8\example.txt"/>
+        <EmbeddedResource Include="Day9\data.txt"/>
+        <EmbeddedResource Include="Day9\example.txt"/>
+        <None Remove="Day1\example.txt"/>
+        <EmbeddedResource Include="Day1\example.txt"/>
+        <None Remove="Day1\example2.txt"/>
+        <EmbeddedResource Include="Day1\example2.txt"/>
+        <None Remove="Day4\example2.txt"/>
+        <EmbeddedResource Include="Day4\example2.txt"/>
+        <None Remove="Day8\example2.txt"/>
+        <EmbeddedResource Include="Day8\example2.txt"/>
+        <None Remove="Day10\example2.txt"/>
+        <EmbeddedResource Include="Day10\example2.txt"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Shared.Math\Shared.Math.csproj" />
+        <ProjectReference Include="..\Shared.Math\Shared.Math.csproj"/>
     </ItemGroup>
 
 </Project>
