@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace DayTests.Shared;
+namespace Toolbox;
 
 /// <summary>
 ///     Greatest Common Divisor helpers

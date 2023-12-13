@@ -1,7 +1,6 @@
-using DayTests.Shared;
 using Shouldly;
 
-namespace Shared.Math.Tests;
+namespace Toolbox.Tests;
 
 public class GCDTests
 {

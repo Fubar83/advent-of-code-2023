@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace DayTests.Shared;
+namespace Toolbox;
 
 public static class Extrapolate
 {

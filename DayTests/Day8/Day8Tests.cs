@@ -1,5 +1,6 @@
 ﻿using DayTests.Shared;
 using Shouldly;
+using Toolbox;
 
 namespace DayTests.Day8;
 
