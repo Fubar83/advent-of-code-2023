@@ -1,5 +1,8 @@
-﻿using DayTests.Shared;
+﻿using System.Text.RegularExpressions;
+using DayTests.Shared;
 using Shouldly;
+using Toolbox.Extensions;
+using Toolbox.Lookups;
 
 namespace DayTests.Day1;
 
@@ -41,69 +44,32 @@ public class Day1Tests
     {
         public static int Part1(string input)
         {
-            var numbers = input.Where(char.IsDigit).ToArray();
-            var result = int.Parse(numbers.First() + "" + numbers.Last());
+            var numbers = input.Where(char.IsDigit).Select(x => x - '0').ToArray();
+            var result = numbers.First() * 10 + numbers.Last();
             return result;
         }
 
         public static int Part2(string input)
         {
-            var findWords = new[]
-            {
-                "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
-            };
+            var regex = new Regex(@"([0-9]|one|two|three|four|five|six|seven|eight|nine)");
 
-            bool TryFindNumberAtIndex(int index, out int number)
+            var matches = regex.Matches(input, true).ToArray();
+
+            var first = matches.First().Value;
+            var last = matches.Last().Value;
+
+
+            return ToNumber(first) * 10 + ToNumber(last);
+
+            int ToNumber(string str)
             {
-                if (char.IsDigit(input[index]))
+                if (int.TryParse(str, out var value))
                 {
-                    number = int.Parse(input[index].ToString());
-                    return true;
+                    return value;
                 }
 
-                var remaining = input.Substring(index);
-                for (var i = 0; i < findWords.Length; i++)
-                {
-                    var word = findWords[i];
-                    if (remaining.StartsWith(word))
-                    {
-                        number = i + 1;
-                        return true;
-                    }
-                }
-
-                number = 0;
-                return false;
+                return NumberLookup.Convert(str);
             }
-
-            int FindFirstNumber()
-            {
-                for (var i = 0; i < input.Length; i++)
-                {
-                    if (TryFindNumberAtIndex(i, out var number))
-                    {
-                        return number;
-                    }
-                }
-
-                return 0;
-            }
-
-            int FindLastNumber()
-            {
-                for (var i = 0; i < input.Length; i++)
-                {
-                    if (TryFindNumberAtIndex(input.Length - i - 1, out var number))
-                    {
-                        return number;
-                    }
-                }
-
-                return 0;
-            }
-
-            var result = FindFirstNumber() * 10 + FindLastNumber();
-            return result;
         }
     }
 }

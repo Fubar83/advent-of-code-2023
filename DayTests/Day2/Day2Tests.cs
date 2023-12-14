@@ -1,5 +1,6 @@
 ﻿using DayTests.Shared;
 using Shouldly;
+using Toolbox.Extensions;
 
 namespace DayTests.Day2;
 
@@ -41,6 +42,31 @@ public class Day2Tests
     {
         public static int Part1(string input)
         {
+            var reader = new StringReader(input);
+
+            reader.ReadUntil(' ');
+            var gameId = int.Parse(reader.ReadUntil(':'));
+            var config = BuildConfig();
+            while (reader.Read() != -1)
+            {
+                var count = int.Parse(reader.ReadUntil(' '));
+                var color = reader.ReadUntil(out var delimiter, ',', ';');
+
+                config[color] -= count;
+
+                if (config[color] < 0)
+                {
+                    return 0;
+                }
+
+                if (delimiter == ';')
+                {
+                    config = BuildConfig();
+                }
+            }
+
+            return gameId;
+
             IDictionary<string, int> BuildConfig()
             {
                 return new Dictionary<string, int>
@@ -48,77 +74,29 @@ public class Day2Tests
                     { "red", 12 }, { "green", 13 }, { "blue", 14 }
                 };
             }
-
-            var remaining = BuildConfig();
-
-            var items = input.Split(new[] { ':', ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
-
-            var gameId = int.Parse(items[1]);
-            var valid = false;
-            for (var i = 2; i < items.Length; i += 2)
-            {
-                var color = items[i + 1];
-                var count = int.Parse(items[i]);
-                var newGroup = color.EndsWith(';');
-                if (newGroup)
-                {
-                    color = color.TrimEnd(';');
-                }
-
-                remaining[color] -= count;
-                valid = !remaining.Any(x => x.Value < 0);
-                if (!valid)
-                {
-                    break;
-                }
-
-                if (newGroup)
-                {
-                    remaining = BuildConfig();
-                }
-            }
-
-            return valid ? gameId : 0;
         }
 
         public static int Part2(string input)
         {
-            IDictionary<string, int> BuildConfig()
-            {
-                return new Dictionary<string, int>
-                {
-                    { "red", 12 }, { "green", 13 }, { "blue", 14 }
-                };
-            }
+            var reader = new StringReader(input);
 
-            var remaining = BuildConfig();
-
-            var items = input.Split(new[] { ':', ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
+            reader.ReadUntil(' ');
 
             var result = new Dictionary<string, int>
             {
-                { "red", 0 }, { "blue", 0 }, { "green", 0 }
+                { "red", 0 },
+                { "green", 0 },
+                { "blue", 0 }
             };
-            for (var x = 2; x < items.Length; x += 2)
+
+            while (reader.Read() != -1)
             {
-                var color = items[x + 1];
-                var count = int.Parse(items[x]);
-                var newGroup = color.EndsWith(';');
-                if (newGroup)
-                {
-                    color = color.TrimEnd(';');
-                }
+                var count = int.Parse(reader.ReadUntil(' '));
+                var color = reader.ReadUntil(',', ';');
 
-                remaining[color] -= count;
-
-                if (result[color] < count)
+                if (count > result[color])
                 {
                     result[color] = count;
-                }
-
-                if (newGroup)
-                {
-                    remaining = BuildConfig();
                 }
             }
 
