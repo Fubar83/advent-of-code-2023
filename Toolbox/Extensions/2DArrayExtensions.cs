@@ -17,4 +17,25 @@ public static class TwoDimensionArrayExtensions
             .Select(rowIndex => array[rowIndex, colIndex])
             .ToArray();
     }
+    
+    public static void SetColumn<T>(this T[,] array, int colIndex, T[] newColumn)
+    {
+        var rows = Math.Min(array.GetLength(0), newColumn.Length);
+
+        for (var rowIndex = 0; rowIndex < rows; rowIndex++)
+        {
+            array[rowIndex, colIndex] = newColumn[rowIndex];
+        }
+    }
+    
+    public static void SetRow<T>(this T[,] array, int rowIndex, T[] newRow)
+    {
+        var cols = Math.Min(array.GetLength(1), newRow.Length);
+
+        for (var colIndex = 0; colIndex < cols; colIndex++)
+        {
+            array[rowIndex, colIndex] = newRow[colIndex];
+        }
+    }
+    
 }
